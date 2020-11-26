@@ -21,8 +21,6 @@
  */
 #pragma once
 
-#define CONFIG_EXAMPLES_DIR "Geeetech/A20T"
-
 /**
  * Configuration_adv.h
  *
@@ -1086,14 +1084,8 @@
   #if HAS_BED_PROBE
     //#define PROBE_OFFSET_WIZARD
     #if ENABLED(PROBE_OFFSET_WIZARD)
-      //
-      // Enable to init the Probe Z-Offset when starting the Wizard.
-      // Use the estimated nozzle-to-probe Z offset, plus a little more.
-      //
-      //#define PROBE_OFFSET_WIZARD_START_Z -4.0
-
-      // Set a convenient position to do the calibration (probing point and nozzle/bed-distance)
-      //#define PROBE_OFFSET_WIZARD_XY_POS { X_CENTER, Y_CENTER }
+      #define PROBE_OFFSET_START -4.0   // Estimated nozzle-to-probe Z offset, plus a little extra
+      //#define PROBE_OFFSET_WIZARD_XY_POS XY_CENTER // Set a convenient position to do the measurement
     #endif
   #endif
 
