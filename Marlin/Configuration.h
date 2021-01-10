@@ -159,7 +159,7 @@
 // Save and restore temperature and fan speed on tool-change.
 // Set standby for the unselected tool with M104/106/109 T...
 #if ENABLED(SINGLENOZZLE)
-  #define SINGLENOZZLE_STANDBY_TEMP
+  //#define SINGLENOZZLE_STANDBY_TEMP
   //#define SINGLENOZZLE_STANDBY_FAN
 #endif
 
@@ -755,7 +755,8 @@
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 200, 200, 30, 120 }
+//Tom Vers shows:v#define DEFAULT_MAX_FEEDRATE          { 200, 200, 30, 120 }
+#define DEFAULT_MAX_FEEDRATE          { 500, 500, 5, 25 }
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
@@ -784,6 +785,8 @@
  *   M204 R    Retract Acceleration
  *   M204 T    Travel Acceleration
  */
+
+//Tom different to Sample config
 #define DEFAULT_ACCELERATION          500    // X, Y, Z and E acceleration for printing moves
 #define DEFAULT_RETRACT_ACCELERATION  500    // E acceleration for retracts
 #define DEFAULT_TRAVEL_ACCELERATION   500    // X, Y, Z acceleration for travel (non printing) moves
@@ -810,6 +813,7 @@
   #endif
 #endif
 
+//Tom Different to sample
 #define DEFAULT_EJERK    3.5  // May be used by Linear Advance
 
 /**
